@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Envelope Budget Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+            <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Envelope Budget Planner</span>
+            </a>
+        </header>
+        <main>
+            <div class="row mb-3 text-center">
+                <div class="col-md-3 themed-grid-col">
+                    <label class="badge bg-secondary fs-4">Not Budgeted</label>
+                    <br>
+                    <label id="notBudgeted">0</label>
+                </div>
+                <div class="col-md-3 themed-grid-col">
+                    <label class="badge bg-secondary fs-4">Total Budgeted</label>
+                    <br>
+                    <label id="totalBudgeted">0</label>
+                </div>
+                <div class="col-md-3 themed-grid-col">
+                    <label class="badge bg-secondary fs-4">Total Income</label>
+                    <br>
+                    <label id="totalIncome">0</label>
+                </div>
+                <div class="col-md-3 themed-grid-col">
+                    <label class="badge bg-secondary fs-4">Total Spent</label>
+                    <br>
+                    <label id="totalSpent">0</label>
+                </div>
+                <div class="col-md-3 themed-grid-col">
+                    <br class="mb-label">
+                    <label>Transaction Type</label>
+                    <select class="form-control" id="transactionSelect" name="category">
+                        <option value="income">Income</option>
+                        <option value="assign">Assign</option>
+                        <option value="spend">Spend</option>
+                    </select>
+                </div>
+                <div class="col-md-3 themed-grid-col">
+                    <br class="mb-label">
+                    <label>Amount</label>
+                    <input type="number" id="amount" class="form-control" >
+                </div>
+                <div class="col-md-3 themed-grid-col">
+                    <br class="mb-label">
+                    <label>Category</label>
+                    <input type="text" id="category" class="form-control" >
+                </div>
+                <div class="col-md-3 themed-grid-col">
+                    <br class="mb-label">
+                    <br class="mb-label">
+                    <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            <table class="table table-striped table-sm" id="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Category</th>
+                    <th scope="col">Available</th>
+                    <th scope="col">Total Spent</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <tr></tr>
+                </tbody>
+              </table>
+        </main>
+    </div>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </body>
+</html>
